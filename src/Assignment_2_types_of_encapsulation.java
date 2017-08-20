@@ -5,6 +5,18 @@ class Employee{
     private String name;
     private int salary;
 
+    Employee(){
+        System.out.println("Default constructor called");
+        this.empId=0;
+        this.name="";
+        this.salary=0;
+
+    }
+    Employee(int empId){
+        System.out.println("Parameterised constructor called");
+        this.empId=empId;
+    }
+    
     public int getEmpId() {
         return empId;
     }
@@ -29,18 +41,6 @@ class Employee{
         this.salary = salary;
     }
 
-
-    Employee(){
-        System.out.println("Default constructor called");
-        this.empId=0;
-        this.name="";
-        this.salary=0;
-
-    }
-    Employee(int empId){
-        System.out.println("Parameterised constructor called");
-        this.empId=empId;
-    }
 
     public void displayEmployeeDetails(){
         System.out.println("Employee details are");
