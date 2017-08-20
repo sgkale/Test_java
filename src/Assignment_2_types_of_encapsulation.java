@@ -16,7 +16,7 @@ class Employee{
         System.out.println("Parameterised constructor called");
         this.empId=empId;
     }
-    
+
     public int getEmpId() {
         return empId;
     }
@@ -62,16 +62,20 @@ public class Assignment_2_types_of_encapsulation {
         Employee[] emp= new Employee[5];
         Scanner sc=new Scanner(System.in);
         for(int i=0;i<5;i++){
-
+            emp[i]=new Employee(i); //Initialize object
             // WAY 1
             /*
-            emp[i]=new Employee(i);
+
             emp[i].acceptEmployeeDetails(100);
             */
 
             // way 2
+
+            System.out.println("Enter id");
             emp[i].setEmpId(sc.nextInt());
+            System.out.println("Enter name");
             emp[i].setName(sc.next());
+            System.out.println("Enter salary");
             emp[i].setSalary(sc.nextInt());
 
         }
@@ -81,8 +85,11 @@ public class Assignment_2_types_of_encapsulation {
             emp[i].displayEmployeeDetails();
             */
             // way 2
+            System.out.println("Id");
             System.out.println(emp[i].getEmpId());
+            System.out.println("name");
             System.out.println(emp[i].getName());
+            System.out.println("Salary");
             System.out.println(emp[i].getSalary());
         }
 
